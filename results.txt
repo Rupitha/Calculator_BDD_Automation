@@ -1,0 +1,69 @@
+$ behave | tee results.txt
+Feature: Subtraction # features/calculator.feature:1
+
+  Scenario: 5 minus 2        # features/calculator.feature:3
+    Given I load the website # steps/common.py:6
+    When Calc 5-2            # steps/common.py:11
+    Then returns 3           # steps/calc.py:5
+
+  Scenario: 5 minus 0        # features/calculator.feature:8
+    Given I load the website # steps/common.py:6
+    When Calc 5-0            # steps/common.py:11
+    Then returns 5           # steps/calc.py:5
+
+  Scenario: 0 minus 4        # features/calculator.feature:13
+    Given I load the website # steps/common.py:6
+    When Calc 0-4            # steps/common.py:11
+    Then returns -4          # steps/calc.py:5
+
+  Scenario: 1 minus 2        # features/calculator.feature:18
+    Given I load the website # steps/common.py:6
+    When Calc 1-2            # steps/common.py:11
+    Then returns -1          # steps/calc.py:5
+
+  Scenario: 1 minus -5       # features/calculator.feature:23
+    Given I load the website # steps/common.py:6
+    When Calc 1--5           # steps/common.py:11
+    Then returns -4          # steps/calc.py:5
+
+  Scenario: -5 minus 2       # features/calculator.feature:28
+    Given I load the website # steps/common.py:6
+    When Calc -5-2           # steps/common.py:11
+    Then returns -7          # steps/calc.py:5
+
+Feature: Division # features/division.feature:2
+
+  Scenario: 5 divided 2      # features/division.feature:4
+    Given I load the website # steps/common.py:6
+    When Calc 5/2            # steps/common.py:11
+    Then returns 2.5         # steps/calc.py:5
+
+  Scenario: 2 divided 5      # features/division.feature:9
+    Given I load the website # steps/common.py:6
+    When Calc 2/5            # steps/common.py:11
+    Then returns 0.4         # steps/calc.py:5
+
+  Scenario: 5 divided -2     # features/division.feature:14
+    Given I load the website # steps/common.py:6
+    When Calc 5/-2           # steps/common.py:11
+    Then returns 3           # steps/calc.py:5
+
+  Scenario: -5 divided 2     # features/division.feature:19
+    Given I load the website # steps/common.py:6
+    When Calc -5/2           # steps/common.py:11
+    Then returns -2.5        # steps/calc.py:5
+
+  Scenario: 6 divided 0      # features/division.feature:24
+    Given I load the website # steps/common.py:6
+    When Calc 6/0            # steps/common.py:11
+    Then returns Error       # steps/calc.py:5
+
+  Scenario: 0 divided 3      # features/division.feature:29
+    Given I load the website # steps/common.py:6
+    When Calc 0/3            # steps/common.py:11
+    Then returns 0           # steps/calc.py:5
+
+2 features passed, 0 failed, 0 skipped
+12 scenarios passed, 0 failed, 0 skipped
+36 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m25.947s
