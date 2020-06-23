@@ -7,13 +7,13 @@ Feature: Subtraction
 
     Scenario: 5 minus 0
         Given I load the website
-        When Calc 5-2
-        Then returns 3
+        When Calc 5-0
+        Then returns 5
 
-    Scenario: 0 minus 5
+    Scenario: 0 minus 4
         Given I load the website
-        When Calc 0-5
-        Then returns -5
+        When Calc 0-4
+        Then returns -4
 
     Scenario: 1 minus 2
         Given I load the website

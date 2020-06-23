@@ -1,4 +1,4 @@
-#import time
+import time
 from selenium import webdriver
 #rom urllib.parse import urljoin
 from selenium.webdriver.common.keys import Keys
@@ -31,6 +31,7 @@ class Calculator_app:
         element = self.driver.find_element_by_id("fullframe")
         element.send_keys(math_op)
         element.send_keys(Keys.ENTER)
+        time.sleep(1)
 
     def close_driver(self):
         return self.driver.close()

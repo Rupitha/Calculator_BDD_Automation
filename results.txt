@@ -1,4 +1,5 @@
-$ behave | tee results.txt
+$ behave | tee results.txt 
+
 Feature: Subtraction # features/calculator.feature:1
 
   Scenario: 5 minus 2        # features/calculator.feature:3
@@ -66,4 +67,4 @@ Feature: Division # features/division.feature:2
 2 features passed, 0 failed, 0 skipped
 12 scenarios passed, 0 failed, 0 skipped
 36 steps passed, 0 failed, 0 skipped, 0 undefined
-Took 0m25.947s
+Took 0m23.877s
