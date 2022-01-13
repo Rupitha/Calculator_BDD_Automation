@@ -1,5 +1,5 @@
 behave==1.2.6
 allure-behave==2.8.16
-Pillow==7.1.2
+Pillow==9.0.0
 pytesseract==0.3.4
 selenium==3.141.0
